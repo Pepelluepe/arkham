@@ -22,7 +22,7 @@ public class Marker extends ImageView {
 	
 	Marker(Token location)
 	{
-		Image e = new Image("/game/characters/markers/AshcanPeteMarker.png"); 
+		Image e = new Image("markers/AshcanPeteMarker.png"); 
 		setImage(e);
 		setEffect(getDropShadow());
 		move(location);
