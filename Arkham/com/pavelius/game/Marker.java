@@ -12,7 +12,7 @@ public class Marker extends ImageView {
 	private DropShadow getDropShadow() {
 		if(dropShadow==null) {
 			dropShadow = new DropShadow();
-			dropShadow.setRadius(5.0);
+			dropShadow.setRadius(15.0);
 			dropShadow.setOffsetX(3.0);
 			dropShadow.setOffsetY(3.0);
 			dropShadow.setColor(Color.color(0.5, 0.5, 0.5));
@@ -20,22 +20,19 @@ public class Marker extends ImageView {
 		return dropShadow;
 	}
 	
-	Marker(Token location)
-	{
-		Image e = new Image("markers/AshcanPeteMarker.png"); 
+	Marker(Token location) {
+		Image e = new Image("com/pavelius/game/markers/AshcanPeteMarker.png"); 
 		setImage(e);
 		setEffect(getDropShadow());
 		move(location);
 	}
 	
-	void move(double x, double y)
-	{
+	void move(double x, double y) {
 		setLayoutX(x);
 		setLayoutY(y);		
 	}
 	
-	void move(Token pos)
-	{
+	void move(Token pos) {
 		move(pos.get(Token.PosX) - getImage().getWidth()/2,
 				pos.get(Token.PosY) - getImage().getHeight()/2);
 	}	

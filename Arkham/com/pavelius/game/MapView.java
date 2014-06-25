@@ -6,7 +6,7 @@ import javafx.scene.image.ImageView;
 public class MapView extends ImageView {
 
 	MapView() {
-		setImage(new Image("background/Board.png"));
+		setImage(new Image("com/pavelius/game/background/Board.png"));
 	}
 	
 }
